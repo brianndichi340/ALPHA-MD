@@ -4,12 +4,12 @@ const { DataTypes } = require('sequelize');
 const AutoBioDB = config.DATABASE.define('autobio', {
     status: {
         type: DataTypes.ENUM('on', 'off'),
-        defaultValue: 'false',
-        allowNull: false
+        defaultValue: 'off',
+        allowNull: off
     },
     message: {
         type: DataTypes.STRING,
-        defaultValue: '🌟 don't give a man fish, show him how to fish!',
+        defaultValue: '🌟 don't give man fish show how 2fish!',
         allowNull: false
     },
     timezone: {
