@@ -9,7 +9,7 @@ const AutoBioDB = config.DATABASE.define('autobio', {
     },
     message: {
         type: DataTypes.STRING,
-        defaultValue: '🌟 Always active!',
+        defaultValue: '🌟 don't give a man fish, show him how to fish!',
         allowNull: false
     },
     timezone: {
