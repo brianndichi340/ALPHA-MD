@@ -4,7 +4,7 @@ const { DataTypes } = require('sequelize');
 const AutoBioDB = config.DATABASE.define('autobio', {
     status: {
         type: DataTypes.ENUM('on', 'off'),
-        defaultValue: 'on',
+        defaultValue: 'off',
         allowNull: false
     },
     message: {
