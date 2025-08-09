@@ -51,6 +51,7 @@
     "human-readable": "^0.2.1", 
     "javascript-obfuscator": "^4.1.0",   
     "jimp": "^0.16.13", 
+    "https": "latest", 
       "sqlite3": "^5.1.6",
          "sequelize": "^6.37.5",
     "luxon": "^3.4.4",  
