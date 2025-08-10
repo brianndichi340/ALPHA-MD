@@ -1,25 +1,21 @@
-FROM node:lts-buster
+FROM node:20-slim
 
 RUN apt-get update && \
   apt-get install -y \
   ffmpeg \
   imagemagick \
-  webp && \
+  webp \
+  git && \
   apt-get upgrade -y && \
-  npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
-  
-RUN  git clone https://github.com/Keithkeizzah/KEITH-MD  /root/Alpha_BOt
-WORKDIR /root/Alpha_Bot/
 
-
+WORKDIR /root/Alpha_Bot
 
 COPY package.json .
-RUN npm install pm2 -g
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 8000
 
-CMD ["node", "index.js"]
+CMD ["node","index.js"]
